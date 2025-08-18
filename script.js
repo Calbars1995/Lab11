@@ -72,4 +72,11 @@ class Store
         //simple push to array
         this.inventory.push(product);
     }
+    //get inventory value
+    getInventoryValue()
+    {
+        //loop for each item in array
+            //inside loop, call getTotalValue method, add it to a running total
+        //outside loop, print running total
+    }
 }
