@@ -66,4 +66,9 @@ class Store
         //makes inventory an array
         this.inventory = [];
     }
+    //add product method
+    addProduct()
+    {
+        this.inventory.push(product);
+    }
 }
