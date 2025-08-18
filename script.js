@@ -75,6 +75,7 @@ class Store
     //get inventory value
     getInventoryValue()
     {
+        //running total to add everything together
         let runningTotal = 0;
         //loop for each item in array
         inventory.forEach(item => 
@@ -85,6 +86,12 @@ class Store
         );
         //outside loop, return running total   
         return runningTotal; 
-        
+    }
+    //find by name
+    findProductByName(name)
+    {
+        //loop for each item in array
+            //inside loop, see if items's name is equal to name given
+        //outside loop, if found, return name, if not found return null
     }
 }
