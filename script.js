@@ -56,3 +56,14 @@ console.log(sample1.toString());
 //Sample two for perishable
 let sample2 = new PerishableProductProperties('Bacon', 7.98, 21, 'October 12, 2025');
 console.log(sample2.toString());
+
+//Store Class
+class Store
+{
+    //constructor
+    constructor()
+    {
+        //makes inventory an array
+        this.inventory = [];
+    }
+}
