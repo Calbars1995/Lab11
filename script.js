@@ -75,8 +75,16 @@ class Store
     //get inventory value
     getInventoryValue()
     {
+        let runningTotal = 0;
         //loop for each item in array
-            //inside loop, call getTotalValue method, add it to a running total
-        //outside loop, print running total
+        inventory.forEach(item => 
+            {
+                //inside loop, call getTotalValue method, add it to a running total
+                runningTotal += item.getTotalValue();
+            }
+        );
+        //outside loop, return running total   
+        return runningTotal; 
+        
     }
 }
