@@ -69,6 +69,7 @@ class Store
     //add product method
     addProduct()
     {
+        //simple push to array
         this.inventory.push(product);
     }
 }
