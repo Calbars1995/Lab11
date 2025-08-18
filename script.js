@@ -16,7 +16,7 @@ class ProductProperties
     //turns all the information into a readable string
     toString()
     {
-        return `Product Name: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}`
+        return `Product Name: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}`;
     }
 }
 
@@ -27,10 +27,17 @@ class PerishableProductProperties extends ProductProperties
     constructor(name, price, quantity, expirationDate)
     {
         //super for something already in parent
-        super(name);
-        super(price);
-        super(quantity);
+        super(name, price, quantity);  //all need to be in one super, made mistake earlier and saw error in terminal
         //regular usage for new property
         this.expirationDate = expirationDate;
     }
+    //new toString function that would be used instead of one above if this is the class being called
+    toString()
+    {
+        return `${super.toString()}, Expiry Date: ${this.expirationDate}`;
+    }
 }
+
+//Sample one for perishable
+let sample1 = new PerishableProductProperties('Cheese', 4.97, 36, 'September 19, 2025');
+console.log(sample1.toString());
