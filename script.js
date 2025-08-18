@@ -18,6 +18,17 @@ class ProductProperties
     {
         return `Product Name: ${this.name}, Price: $${this.price}, Quantity: ${this.quantity}`;
     }
+    //Adding static applyDiscount
+    static applyDiscount(products, discount)
+    {
+        //loops through all products
+        products.forEach(product => 
+            {
+                //new price is equal to old price times 100% minus the discount%
+                product.price = product.price * (1 - discount)
+            }
+        );
+    }
 }
 
 //Perishable child class of product properties
