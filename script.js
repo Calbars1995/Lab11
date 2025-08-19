@@ -67,7 +67,7 @@ class Store
         this.inventory = [];
     }
     //add product method
-    addProduct()
+    addProduct(product)
     {
         //simple push to array
         this.inventory.push(product);
@@ -78,7 +78,7 @@ class Store
         //running total to add everything together
         let runningTotal = 0;
         //loop for each item in array
-        inventory.forEach(item => 
+        this.inventory.forEach(item => 
             {
                 //inside loop, call getTotalValue method, add it to a running total
                 runningTotal += item.getTotalValue();
@@ -95,7 +95,7 @@ class Store
         this.inventory.forEach(item =>
             {
                 //inside loop, see if items's name is equal to name given
-                if (this.item == name)
+                if (this.name == name)
                 {
                     inInventory = true;
                 }
@@ -116,3 +116,4 @@ class Store
 //adding more products
 let sample3 = new ProductProperties('Water Bottle', 9.97, 59);
 let sample4 = new ProductProperties('Bread Knife', 8.97, 13);
+let sample5 = new PerishableProductProperties('Eggs', 6.97, 60, 'September 1, 2025');
