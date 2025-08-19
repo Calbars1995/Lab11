@@ -121,3 +121,12 @@ let sample6 = new ProductProperties('TShirt', 14.97, 10);
 let sample7 = new PerishableProductProperties('Chicken Soup', 1.97, 49, 'December 14, 2028');
 
 //add to store
+let store = new Store;
+//create array with sample#
+let samples = [sample1, sample2, sample3, sample4, sample5, sample6, sample7]
+//for loop looping through all samples
+for(let i = 0; i < samples.length; i++)
+{
+    //adding it to store
+    store.addProduct(samples[i]);
+}
