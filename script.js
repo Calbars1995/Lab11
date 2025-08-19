@@ -130,3 +130,6 @@ for(let i = 0; i < samples.length; i++)
     //adding it to store
     store.addProduct(samples[i]);
 }
+
+//get total value and print it
+console.log(store.getInventoryValue());
