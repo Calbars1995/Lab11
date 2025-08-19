@@ -132,4 +132,8 @@ for(let i = 0; i < samples.length; i++)
 }
 
 //get total value and print it
-console.log(store.getInventoryValue());
+console.log(`Total inventory value before discount: ${store.getInventoryValue()}`);
+
+//apply discount
+ProductProperties.applyDiscount(samples, 0.15);
+console.log(`Total inventory value after 15% discount: ${store.getInventoryValue()}`);
