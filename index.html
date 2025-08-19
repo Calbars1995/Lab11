@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lab11</title>
-    <script src="script.js"></script>
+    <!--script cant be here because no onload function and want to use script to change some of the p tags-->
 </head>
 <body>
     <h1>Lab11 by Chris Schleicher</h1>
@@ -17,5 +17,7 @@
     <p id="line4"></p>
     <p id="line5"></p>
     <p id="line6"></p>
+    <script src="script.js"></script> <!--realized why lines wont change, script called before lines
+    could have also done a onload function but decided the quicker way-->
 </body>
 </html>

@@ -52,10 +52,12 @@ class PerishableProductProperties extends ProductProperties
 //Sample one for perishable
 let sample1 = new PerishableProductProperties('Cheese', 4.97, 36, 'September 19, 2025');
 console.log(sample1.toString());
+document.getElementById("line1").innerText = sample1.toString();
 
 //Sample two for perishable
 let sample2 = new PerishableProductProperties('Bacon', 7.98, 21, 'October 12, 2025');
 console.log(sample2.toString());
+document.getElementById("line2").innerText = sample2.toString();
 
 //Store Class
 class Store
