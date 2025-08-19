@@ -117,3 +117,7 @@ class Store
 let sample3 = new ProductProperties('Water Bottle', 9.97, 59);
 let sample4 = new ProductProperties('Bread Knife', 8.97, 13);
 let sample5 = new PerishableProductProperties('Eggs', 6.97, 60, 'September 1, 2025');
+let sample6 = new ProductProperties('TShirt', 14.97, 10);
+let sample7 = new PerishableProductProperties('Chicken Soup', 1.97, 49, 'December 14, 2028');
+
+//add to store
