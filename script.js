@@ -126,10 +126,12 @@ for(let i = 0; i < samples.length; i++)
 
 //get total value and print it
 console.log(`Total inventory value before discount: ${store.getInventoryValue()}`);
+document.getElementById("line3").innerText = `Total inventory value before discount: ${store.getInventoryValue()}`;
 
 //apply discount
 ProductProperties.applyDiscount(samples, 0.15);
 console.log(`Total inventory value after 15% discount: ${store.getInventoryValue()}`);
+document.getElementById("line4").innerText = `Total inventory value after 15% discount: ${store.getInventoryValue()}`;
 
 //find and print details
 //on list
@@ -137,10 +139,12 @@ let tshirt = store.findProductByName('TShirt');
 if (tshirt != null)
 {
     console.log(tshirt.toString());
+    document.getElementById("line5").innerText = tshirt.toString();
 }
 else
 {
     console.log("TShirt is not on the inventory");
+    document.getElementById("line5").innerText = "TShirt is not on the inventory";
 }
 
 //not on list
@@ -148,8 +152,10 @@ let apple = store.findProductByName('Apple');
 if (apple != null)
 {
     console.log(apple.toString());
+    document.getElementById("line6").innerText = apple.toString();
 }
 else
 {
     console.log("Apple is not on the inventory");
+    document.getElementById("line6").innerText = "Apple is not on the inventory";
 }
