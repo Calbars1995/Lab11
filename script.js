@@ -136,3 +136,18 @@ if (tshirt != null)
 {
     console.log(tshirt.toString());
 }
+else
+{
+    console.log("TShirt is not on the inventory");
+}
+
+//not on list
+let apple = store.findProductByName('Apple');
+if (apple != null)
+{
+    console.log(apple.toString());
+}
+else
+{
+    console.log("Apple is not on the inventory");
+}
