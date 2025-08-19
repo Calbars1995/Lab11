@@ -112,3 +112,7 @@ class Store
         }
     }
 }
+
+//adding more products
+let sample3 = new ProductProperties('Water Bottle', 9.97, 59);
+let sample4 = new ProductProperties('Bread Knife', 8.97, 13);
