@@ -90,26 +90,17 @@ class Store
     //find by name
     findProductByName(name)
     {
-        let inInventory = false;
         //loop for each item in array
-        this.inventory.forEach(item =>
+        for (let i = 0; i < this.inventory.length; i++)
             {
                 //inside loop, see if items's name is equal to name given
-                if (this.name == name)
+                let item = this.inventory[i];
+                if (item.name === name)
                 {
-                    inInventory = true;
+                    return item;
                 }
             }
-        );
-        //outside loop, if found, return name, if not found return null
-        if (inInventory)
-        {
-            return name;
-        }
-        else
-        {
             return null;
-        }
     }
 }
 
@@ -137,3 +128,11 @@ console.log(`Total inventory value before discount: ${store.getInventoryValue()}
 //apply discount
 ProductProperties.applyDiscount(samples, 0.15);
 console.log(`Total inventory value after 15% discount: ${store.getInventoryValue()}`);
+
+//find and print details
+//on list
+let tshirt = store.findProductByName('TShirt');
+if (tshirt != null)
+{
+    console.log(tshirt.toString());
+}
