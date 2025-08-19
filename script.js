@@ -90,8 +90,25 @@ class Store
     //find by name
     findProductByName(name)
     {
+        let inInventory = false;
         //loop for each item in array
-            //inside loop, see if items's name is equal to name given
+        this.inventory.forEach(item =>
+            {
+                //inside loop, see if items's name is equal to name given
+                if (this.item == name)
+                {
+                    inInventory = true;
+                }
+            }
+        );
         //outside loop, if found, return name, if not found return null
+        if (inInventory)
+        {
+            return name;
+        }
+        else
+        {
+            return null;
+        }
     }
 }
